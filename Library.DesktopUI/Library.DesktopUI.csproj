@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8589B342-40D6-434D-81CA-F5A4D8A9F509}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Library.DesktopUI</RootNamespace>
+    <AssemblyName>Library.DesktopUI</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Commands\AuthorCommands\EditAuthorCommand.cs" />
+    <Compile Include="Commands\AuthorCommands\ExportAuthorsCommand.cs" />
+    <Compile Include="Commands\AuthorCommands\OpenAddAuthorCommand.cs" />
+    <Compile Include="Commands\AuthorCommands\OpenEditAuthorCommand.cs" />
+    <Compile Include="Commands\AuthorCommands\SaveAuthorCommand.cs" />
+    <Compile Include="Commands\BookCommands\DeleteBooksCommand.cs" />
+    <Compile Include="Commands\BookCommands\EditBookCommand.cs" />
+    <Compile Include="Commands\BookCommands\ExportBooksCommand.cs" />
+    <Compile Include="Commands\BookCommands\OpenAddBookCommand.cs" />
+    <Compile Include="Commands\BookCommands\OpenEditBookCommand.cs" />
+    <Compile Include="Commands\BookCommands\SaveBookCommand.cs" />
+    <Compile Include="Commands\BranchCommands\DeleteBranchCommand.cs" />
+    <Compile Include="Commands\BranchCommands\ExportBranchCommand.cs" />
+    <Compile Include="Commands\BranchCommands\OpenAddBranchCommand.cs" />
+    <Compile Include="Commands\BranchCommands\OpenEditBranchWindow.cs" />
+    <Compile Include="Commands\BranchCommands\SaveBranchCommand.cs" />
+    <Compile Include="Commands\ConfigCom\Cancelconfigcom.cs" />
+    <Compile Include="Commands\ConfigCom\Saveconfigcom.cs" />
+    <Compile Include="Commands\DeleteAuthorCommand.cs" />
+    <Compile Include="Commands\EditBranchCommand.cs" />
+    <Compile Include="Commands\LibrMainWindowCommand\OpenAuthorsCommand.cs" />
+    <Compile Include="Commands\LibrMainWindowCommand\OpenBooksCommand.cs" />
+    <Compile Include="Commands\LibrMainWindowCommand\OpenBranchesCommands\OpenBranchCommand.cs" />
+    <Compile Include="Commands\LoginCommands\LoginCommand.cs" />
+    <Compile Include="Models\AddAuthorModel.cs" />
+    <Compile Include="Models\AddBookModel.cs" />
+    <Compile Include="Models\AuthorModels\AuthorModel.cs" />
+    <Compile Include="Models\BookModels\BookModel.cs" />
+    <Compile Include="Models\BranchModels\BranchModel.cs" />
+    <Compile Include="Models\Configuration\ConfigModel.cs" />
+    <Compile Include="Models\LoginModels\LoginModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\Config.cs" />
+    <Compile Include="Utils\CsvExporter.cs" />
+    <Compile Include="Utils\CsvExporterAuthors.cs" />
+    <Compile Include="Utils\CsvExporterBranches.cs" />
+    <Compile Include="ViewModel\AddAuthorViewModel.cs" />
+    <Compile Include="ViewModel\AddBookViewModel.cs" />
+    <Compile Include="ViewModel\AuthorViewModel.cs" />
+    <Compile Include="ViewModel\BaseUserControlViewModel.cs" />
+    <Compile Include="ViewModel\BaseWindowViewModel.cs" />
+    <Compile Include="ViewModel\BookViewModel.cs" />
+    <Compile Include="ViewModel\BranchViewModel.cs" />
+    <Compile Include="ViewModel\DbConfviewmodel.cs" />
+    <Compile Include="ViewModel\EditAuthorViewModel.cs" />
+    <Compile Include="ViewModel\EditBookViewModel.cs" />
+    <Compile Include="ViewModel\EditBranchViewModel.cs" />
+    <Compile Include="ViewModel\LibraryViewModel.cs" />
+    <Compile Include="ViewModel\LoginViewModel.cs" />
+    <Compile Include="Views\AddAuthorWindow.xaml.cs">
+      <DependentUpon>AddAuthorWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddBookWindow.xaml.cs">
+      <DependentUpon>AddBookWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddBranchViewModel.cs" />
+    <Compile Include="Views\AddBranchWindow.xaml.cs">
+      <DependentUpon>AddBranchWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AuthoruserControl.xaml.cs">
+      <DependentUpon>AuthoruserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BooksUserControl.xaml.cs">
+      <DependentUpon>BooksUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BranchesUserControl.xaml.cs">
+      <DependentUpon>BranchesUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DbConfiguration.xaml.cs">
+      <DependentUpon>DbConfiguration.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EditAuthorWindow.xaml.cs">
+      <DependentUpon>EditAuthorWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EditBookWindow.xaml.cs">
+      <DependentUpon>EditBookWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EditBranchWindow.xaml.cs">
+      <DependentUpon>EditBranchWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LibraryMainWindow.xaml.cs">
+      <DependentUpon>LibraryMainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LoginWindow.xaml.cs">
+      <DependentUpon>LoginWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WindowStart.xaml.cs">
+      <DependentUpon>WindowStart.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\AddAuthorWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\AddBookWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\AddBranchWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\AuthoruserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\BooksUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\BranchesUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\DbConfiguration.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\EditAuthorWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\EditBookWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\EditBranchWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\LibraryMainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\LoginWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\WindowStart.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Library.Core\Library.Core.csproj">
+      <Project>{388e04c4-4698-4e98-a34b-b2eab305d4e6}</Project>
+      <Name>Library.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
