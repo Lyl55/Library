@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using lib_books.Core.Domain.Entities;
 
 namespace lib_books.Core.Domain.Entities
 {

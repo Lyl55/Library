@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using lib_books.Core.Domain.Abstract;
 
-namespace Library.Core
+namespace lib_books.Core
 {
-    class Kernel
+    public class Kernel
     {
+        public static IUnitOfWork DB { get; set;}
     }
 }

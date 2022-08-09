@@ -28,7 +28,7 @@ namespace lib_books.Core.DataAccess.Sql
                 command.Parameters.AddWithValue("istranslation", book.IsTranslation);
                 command.Parameters.AddWithValue("genre", book.Genre);
                 book.Id = Convert.ToInt32(command.ExecuteScalar()); //bazada yaranan id-ni goturur
-                //command.ExecuteNonQuery();
+                command.ExecuteNonQuery();
             }
         }
 

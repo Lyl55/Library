@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Text;
 using lib_books.Core.Domain.Abstract;
 using lib_books.Core.Domain.Entities;
 
