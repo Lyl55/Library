@@ -1,0 +1,35 @@
+﻿<Window x:Class="lib_books.DeskUI.Views.EditAuthorWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lib_books.DeskUI.Views"
+        mc:Ignorable="d"
+        Title="EditAuthorWindow" Height="600" Width="800" Background="AntiqueWhite">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="3*"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="5*"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Column="1" Margin="0,69,0,-199" Grid.RowSpan="3">
+            <Label Content="Ad:" Foreground="Brown" Margin="10" FontSize="15" Height="35" Width="460"></Label>
+            <TextBox Margin="10" Text="{Binding EditAuthorModel.Name}"></TextBox>
+            <Label Content="Soyad:" Foreground="Brown" Margin="10" FontSize="15"></Label>
+            <TextBox Margin="10" Text="{Binding EditAuthorModel.Surname}"></TextBox>
+
+            <Border Margin="10" >
+                <Button Command="{Binding EditAuthor}" Style="{StaticResource btnAdd}" Foreground="SaddleBrown" FontSize="18" Height="26">
+
+                </Button>
+            </Border>
+        </StackPanel>
+    </Grid>
+</Window>
