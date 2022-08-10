@@ -11,13 +11,13 @@
 
     <Grid Background="SkyBlue">
         <StackPanel>
-            <Label Content="Xoş gəlmisiniz!" HorizontalAlignment="Center" FontFamily="Times New Roman" FontSize="45" Height="80" Margin="0,0,0,30" Background="#00000000" Foreground="MidnightBlue">
+            <Label Content="Welcome!" HorizontalAlignment="Center" FontFamily="Times New Roman" FontSize="45" Height="80" Margin="0,0,0,30" Background="#00000000" Foreground="MidnightBlue">
                 <Label.Effect>
                     <DropShadowEffect BlurRadius="100"/>
                 </Label.Effect>
             </Label>
 
-            <TextBlock Text="İstifadəçi adı:" Background="SkyBlue"  FontFamily="Times New Roman" FontSize="24" Foreground="MidnightBlue" Margin="10,0,0,0"/>
+            <TextBlock Text="Username:" Background="SkyBlue"  FontFamily="Times New Roman" FontSize="24" Foreground="MidnightBlue" Margin="10,0,0,0"/>
             <TextBox x:Name="textBox" Margin="10,0,0,0" BorderThickness="0"  Text="{Binding LoginModel.Username}" Focusable="True"
                          Foreground="Black" Background="SkyBlue" Style="{x:Null}" FontFamily="Century Gothic" FontSize="24">
                 <TextBox.InputBindings>
@@ -27,7 +27,7 @@
 
             <Separator BorderBrush="#60444444" Margin="10"/>
 
-            <TextBlock Text="Şifrə:" Background="SkyBlue"  FontFamily="Times New Roman" FontSize="24" Foreground="MidnightBlue" Margin="10,0,0,0"/>
+            <TextBlock Text="Parol:" Background="SkyBlue"  FontFamily="Times New Roman" FontSize="24" Foreground="MidnightBlue" Margin="10,0,0,0"/>
 
             <PasswordBox Margin="10,0,0,0" x:Name="PasswordTxt"
                              Background="SkyBlue" BorderThickness="0" BorderBrush="#FF8A2525" 
@@ -38,13 +38,13 @@
             </PasswordBox>
             <Separator BorderBrush="#60444444" Margin="10"/>
 
-            <TextBlock Text="İstifadəçi adı və ya şifrə yanlışdır" Background="SkyBlue"    FontFamily="Times New Roman" FontSize="24" 
-                           Foreground="Brown" Margin="10,0,0,10"  Visibility="{Binding ErrorVisibility}"/>
+            <!--TextBlock Text="İstifadəçi adı və ya şifrə yanlışdır" Background="SkyBlue"    FontFamily="Times New Roman" FontSize="24" 
+                           Foreground="Brown" Margin="10,0,0,10"  Visibility="{Binding ErrorVisibility}"/-->
 
 
             <Border VerticalAlignment="Stretch" BorderThickness="5" CornerRadius="10" BorderBrush="#FF333337" Height="auto" Width="150">
                 <Button x:Name="login" FontSize="22" BorderThickness="0" Command="{Binding Login}" CommandParameter="{Binding ElementName=PasswordTxt}" 
-                                        Background="#FF333337" Foreground="MidnightBlue" FontFamily="Century Gothic" FontWeight="Bold" Content="Daxil ol" Style="{StaticResource BaseButton}" Click="login_Click" >
+                                        Background="#FF333337" Foreground="MidnightBlue" FontFamily="Century Gothic" FontWeight="Bold" Content="Sign in" Style="{StaticResource BaseButton}" Click="login_Click" >
                     <Button.InputBindings>
                         <KeyBinding Key="Esc"/>
                     </Button.InputBindings>

@@ -14,7 +14,7 @@
 
 
         <StackPanel  Grid.Row="0" Height="120">
-            <TextBlock Text="Kitabxana sistemi" Foreground="DarkBlue" FontSize="60" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" 
+            <TextBlock Text="Library System" Foreground="DarkBlue" FontSize="60" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" 
                            FontStyle="Italic" FontFamily="Times new roman" Margin="10 0 10 10"/>
             <ProgressBar  x:Name="progressBar" Background="Green" Foreground="DarkGoldenrod"  IsIndeterminate="True"  Height="10" Margin="10 15 10 0"/>
             <Line Stretch="Fill" Stroke="Black" X2="1" VerticalAlignment="Bottom"/>
@@ -32,18 +32,18 @@
                     <Line Stretch="Fill" Stroke="Black" X2="1" VerticalAlignment="Top"/>
                     <ScrollViewer  Opacity="20" CanContentScroll="True" Height="800" HorizontalScrollBarVisibility="Auto">
                         <StackPanel Width="250" Height="700" HorizontalAlignment="Center">
-                            <Button Width="200" Height="60" Style="{StaticResource baseButton}" Content="Filiallar" Command="{Binding OpenBranches}"  Foreground="DarkBlue" FontSize="20" Margin="0 10 0 10">
+                            <Button Width="200" Height="60" Style="{StaticResource baseButton}" Content="Branches" Command="{Binding OpenBranches}"  Foreground="DarkBlue" FontSize="20" Margin="0 10 0 10">
                                 <Button.BitmapEffect>
                                     <DropShadowBitmapEffect Color="DeepSkyBlue" Direction="320" Softness="1" ShadowDepth="10" Opacity="0.5" />
                                 </Button.BitmapEffect>
                             </Button>
 
-                            <Button Width="200" Height="60" Command="{Binding OpenBooks}" Style="{StaticResource baseButton}" Content="Kitablar"  Foreground="DarkBlue" FontSize="20" Margin="0 10 0 10">
+                            <Button Width="200" Height="60" Command="{Binding OpenBooks}" Style="{StaticResource baseButton}" Content="Books"  Foreground="DarkBlue" FontSize="20" Margin="0 10 0 10">
                                 <Button.BitmapEffect>
                                     <DropShadowBitmapEffect Color="DeepSkyBlue" Direction="320" Softness="1" ShadowDepth="10" Opacity="0.5" />
                                 </Button.BitmapEffect>
                             </Button>
-                            <Button Width="200" Height="60" Style="{StaticResource baseButton}" Content="Müəlliflər" Command="{Binding OpenAuthors}"  Foreground="DarkBlue" FontSize="20" Margin="0 10 0 10">
+                            <Button Width="200" Height="60" Style="{StaticResource baseButton}" Content="Authors" Command="{Binding OpenAuthors}"  Foreground="DarkBlue" FontSize="20" Margin="0 10 0 10">
                                 <Button.BitmapEffect>
                                     <DropShadowBitmapEffect Color="DeepSkyBlue" Direction="320" Softness="1" ShadowDepth="10" Opacity="0.5" />
                                 </Button.BitmapEffect>
