@@ -25,5 +25,5 @@ jobs:
       run: cp .\My_Library\bin\debug\net5.0\* C:\Applications\My_Library\
     - name: Start application
       run: | 
-        iisreset /start
+        iisreset /start 
 
