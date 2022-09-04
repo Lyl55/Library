@@ -22,7 +22,7 @@ jobs:
       run: |
        iisreset /stop
     - name: Copy build
-      run: cp .\My_Library\bin\Debug\netcoreapp3.1\* C:\Applications\MyLibrary\
+      run: cp .\My_Library\bin\Debug\net5.0\* C:\Applications\MyLibrary\
     - name: Start application
       run: | 
         iisreset /start
