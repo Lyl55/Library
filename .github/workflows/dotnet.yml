@@ -22,7 +22,7 @@ jobs:
       run: |
        iisreset /stop
     - name: Copy build
-      run: cp .\actions-runner\_work\Library\Library\* C:\Applications\My_Library\
+      run: cp .\* C:\Applications\My_Library\
     - name: Start application
       run: | 
         iisreset /start 
