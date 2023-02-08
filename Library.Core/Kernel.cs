@@ -7,6 +7,8 @@ namespace lib_books.Core
 {
     public class Kernel
     {
+        //db
         public static IUnitOfWork DB { get; set;}
     }
+
 }
