@@ -13,4 +13,5 @@ namespace lib_books.Core.Domain.Abstract
         Author Get(int id);
         void Delete(int id);
     }
+    
 }
